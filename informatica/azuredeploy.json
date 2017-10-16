@@ -552,7 +552,7 @@
                         "value": "[variables('connectorUUIDList')]"
                     },
                     "scriptsUri": {
-                        "value": "[variables('baseUrl')]"
+                        "value": "[variables('scriptsUri')]"
                     },
                     "location": {
                         "value": "[variables('location')]"
