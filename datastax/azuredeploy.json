@@ -52,7 +52,7 @@
         },
         "adminPassword": {
             "type": "securestring",
-            "defaultValue": "foo123!",
+            "defaultValue": "",
             "metadata": {
                 "description": "Admin password for the virtual machines"
             }
