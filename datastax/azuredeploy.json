@@ -101,18 +101,12 @@
       "metadata": {
         "description": "Password for default OpsCenter user 'admin'"
       }
-    },
-    "baseUrl": {
-      "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/sysgain/CI-testing-public/master/datastax",
-      "metadata": {
-        "description": "URL for nested templates and extensions"
-      }
     }
   },
   "variables": {
-    "templateUrl": "[concat(parameters('baseUrl'), '/nested/')]",
-    "extensionUrl": "[concat(parameters('baseUrl'), '/scripts/')]",
+    "baseUrl": "https://raw.githubusercontent.com/sysgain/CI-testing-public/master/datastax",
+    "templateUrl": "[concat(variables('baseUrl'), '/nested/')]",
+    "extensionUrl": "[concat(variables('baseUrl'), '/scripts/')]",
     "nsgTemplateUrl": "[concat(variables('templateUrl'), 'networksecuritygroup.json')]",
     "nodesTemplateUrl": "[concat(variables('templateUrl'), 'nodes.json')]",
     "opsCenterPubIPTemplateUrl": "[concat(variables('templateUrl'), 'opsCenterPublicIP.json')]",
@@ -154,7 +148,7 @@
       }
     },
     {
-      "apiVersion": "2017-08-01",
+      "apiVersion": "2017-06-01",
       "type": "Microsoft.Network/virtualNetworks",
       "name": "[variables('vnetName')]",
       "location": "[variables('location')]",
